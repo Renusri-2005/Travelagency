@@ -1,9 +1,11 @@
 package com.example.travelagency.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
-public class Package {
+@Data
+public class TravelPackage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,6 +14,4 @@ public class Package {
     private String name;
     private String duration;
     private double price;
-
-    // getters & setters
 }

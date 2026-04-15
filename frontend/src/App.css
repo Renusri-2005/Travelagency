@@ -53,4 +53,130 @@ button {
   background: orange;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: darkorange;
+  transform: scale(1.05);
+}
+
+/* Book Now button specific style */
+.card button {
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card button:hover:not(:disabled) {
+  background: #f57c00;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.price {
+  font-size: 1.2em;
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  background: #ffe0e0;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px auto;
+  max-width: 300px;
+}
+
+.success {
+  color: green;
+  background: #e0ffe0;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px auto;
+  max-width: 300px;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  min-width: 350px;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.modal-actions button:first-child {
+  background: #ccc;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Add Package button and form */
+.add-package-btn {
+  margin: 15px auto;
+  display: block;
+}
+
+.add-package-form-container {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+}
+
+.add-package-form-container h3 {
+  margin-top: 0;
 }

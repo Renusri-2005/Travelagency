@@ -2,7 +2,7 @@ package com.example.travelagency.controller;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import com.example.travelagency.model.Package;
+import com.example.travelagency.model.TravelPackage;
 import com.example.travelagency.repository.PackageRepository;
 
 @RestController
@@ -17,12 +17,12 @@ public class PackageController {
     }
 
     @GetMapping
-    public List<Package> getAllPackages() {
+    public List<TravelPackage> getAllPackages() {
         return repo.findAll();
     }
 
     @PostMapping
-    public Package addPackage(@RequestBody Package p) {
+    public TravelPackage addPackage(@RequestBody TravelPackage p) {
         return repo.save(p);
     }
 }

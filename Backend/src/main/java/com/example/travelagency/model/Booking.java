@@ -1,8 +1,10 @@
 package com.example.travelagency.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 public class Booking {
 
     @Id
@@ -12,6 +14,4 @@ public class Booking {
     private String userName;
     private String packageName;
     private String date;
-
-    // getters & setters
 }

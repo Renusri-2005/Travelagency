@@ -1,6 +1,7 @@
 package com.example.travelagency.controller;
 
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 import com.example.travelagency.model.Booking;
 import com.example.travelagency.repository.BookingRepository;
 
@@ -15,8 +16,18 @@ public class BookingController {
         this.repo = repo;
     }
 
+    @GetMapping
+    public List<Booking> getAllBookings() {
+        return repo.findAll();
+    }
+
     @PostMapping
     public Booking bookPackage(@RequestBody Booking booking) {
         return repo.save(booking);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteBooking(@PathVariable Long id) {
+        repo.deleteById(id);
     }
 }
